@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Textfield from "./input.js";
+import TaskList from "./TaskList.js";
+import { useState } from "react";
+export default function App(){
+  const [taskList, setTaskList] = useState([]);
 
-function App() {
+  function addTask(task){
+    let newTask = {
+        title: task,
+        id: Date.now(),
+        status: false
+    };
+    console.log(newTask);
+    setTaskList([...taskList, newTask]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Textfield addTask={addTask}/>
+      <TaskList taskList={taskList}/>
     </div>
-  );
+  )
 }
-
-export default App;
