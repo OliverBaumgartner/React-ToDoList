@@ -5,14 +5,23 @@ export default function Textfield({addTask}) {
     const [task, setTask] = useState("");
 
     function handleClick(){
-        addTask(task);
+        if (task.length > 0){
+            addTask(task);
+            setTask("")
+        }
+    }
+    function handleKeyPress(event){
+        if (event.keyCode === 13){
+            handleClick()
+        }
     }
 
     return (
-        <div>
-            <input type="text" placeholder="new Task" 
+        <div class="input">
+            <input class="taskInput" type="text" value={task} placeholder="new Task" 
+            onKeyDown={handleKeyPress}
             onChange={(e) => setTask(e.target.value)}/>
-            <button onClick={handleClick}>Add</button>
+            <button class="buttonInput"onClick={handleClick}>Add</button>
         </div>
         )
 }

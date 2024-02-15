@@ -1,0 +1,10 @@
+
+
+.tasks span:not(.completed){
+    color: #deadb1;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: rgba(159, 70, 70, 0.436);
+}

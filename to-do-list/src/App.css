@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    background-color: #e93d6f;
+    color: #c9395c;
+}
+
+.mainContainer{
+    text-align: center;
+    width:500px;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 200px;
+    background-color: #2f0602;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.input, .tasks,.tasklist , input, button, span{
+    background-color: #2f0602;
+}
+
+.taskInput{
+    border: 1px solid #c9395c;
+    border-radius: 20px;
+    height: 35px;
+    width: 350px;
+    text-align: center;
+    margin-right: 20px;
+    outline: none;
+}
+
+.buttonInput{
+    border: 1px solid #c9395c;
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin-right: 20px;
+    outline: none;
+}
+.input{
+    border-bottom: 1px solid #c9395c;
+    padding-bottom: 20px;
+}
+.tasklist{
+    padding: 20px;
+    color: #deadb1;
+}
+.tasks{
+    text-align: left;
+    padding: 10px;
+    color: #deadb1;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+  }
+
+input[type="checkbox"] {
+    font: inherit;
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #deadb1;
+    border-radius: 20px;
+    background-color: transparent;
+    margin-right: 20px;
+  }
+
+.tasks button{
+    border: 1px solid #deadb1;;
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 765px;
+    outline: none;
+    color: #deadb1;;
+}
